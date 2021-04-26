@@ -38,16 +38,20 @@ header {
                         z-index: 2;
 
                         a {
-                            margin-right: 3em;
-                            color:rgb(70, 68, 78);
                             font-size: .8em;
+                            color:rgb(70, 68, 78);
+                            margin-right: 0;
                         }
 
                         a:hover {
                             color: $corporateColor;
                             transition: .2s 10ms ease-in-out;
                         }
-                        
+
+                        .menuitem {
+                            margin-right: 3em;
+                        }
+
                         .inspiration_menu {
                             display: none;
                             position: absolute;
@@ -95,7 +99,7 @@ header {
     
                                             .submenu_item_p {
                                                 color: rgb(29, 29, 29);
-                                                width: 300px;
+                                                width: 230px;
     
                                                 .etiqueta {
                                                     font-size: 1em;
@@ -116,23 +120,13 @@ header {
                                                     }
     
                                                     .new_button{
-                                                        font-size: .7em;
+                                                        font-size: .6em;
                                                         font-weight: bold;
-                                                        margin: 0 ;
+                                                        margin-left: .5em;
                                                         border-radius: .2em;
                                                         padding: 0 $base;
                                                         color: $corporateColor;
                                                         background-color: rgb(245, 217, 231);
-                                                    }
-    
-                                                    .pro_button{
-                                                        font-size: .7em;
-                                                        font-weight: bold;
-                                                        margin: 0 ;
-                                                        border-radius: .2em;
-                                                        padding: 0 $base;
-                                                        color: rgb(255, 245, 250);
-                                                        background-color: $corporateColor;
                                                     }
                                                 }
                                             }
@@ -142,6 +136,7 @@ header {
                                             .fa-arrow-right{
                                                 font-size: 12px;
                                                 color: $corporateColor;
+                                                margin-right: 1em;
                                             }
                                         }
                                     }
@@ -171,6 +166,7 @@ header {
                                     padding: 0 $base * 5;
                                     color: black;
                                     font-weight: bold;
+                                    font-size: .9em;
                                 }
 
                                 ul {
@@ -231,7 +227,7 @@ header {
 
                                         .submenu_item_p {
                                             color: rgb(29, 29, 29);
-                                            width: 300px;
+                                            width: 230px;
 
                                             .etiqueta {
                                                 font-size: 1em;
@@ -251,22 +247,20 @@ header {
                                                     margin-right: .5em;
                                                 }
 
-                                                .new_button{
+                                                .new_button, .pro_button{
                                                     font-size: .7em;
                                                     font-weight: bold;
-                                                    margin: 0 ;
+                                                    margin-left: .5em;
                                                     border-radius: .2em;
                                                     padding: 0 $base;
+                                                }
+
+                                                .new_button {
                                                     color: $corporateColor;
                                                     background-color: rgb(245, 217, 231);
                                                 }
 
                                                 .pro_button{
-                                                    font-size: .7em;
-                                                    font-weight: bold;
-                                                    margin: 0 ;
-                                                    border-radius: .2em;
-                                                    padding: 0 $base;
                                                     color: rgb(255, 245, 250);
                                                     background-color: $corporateColor;
                                                 }
@@ -278,6 +272,7 @@ header {
                                         .fa-arrow-right{
                                             font-size: 12px;
                                             color: $corporateColor;
+                                            margin-right: 1em;
                                         }
                                     }
                                 }
@@ -301,38 +296,6 @@ header {
         }
 
         .header_right {
-            display: flex;
-            align-items: center;
-
-            input { 
-                display: flex;
-                text-align: left;
-                padding-left: 1em;
-                padding-right: 1em;
-                width: 10em;
-                height: 2em;
-                border: solid 2px $corporateColor;
-                border-radius: .5em;
-                transition: 1s;
-                font-size: .8em;
-                margin-right: 1em;
-            }
-            
-            input::placeholder {
-                font-size: .8em;
-                color: rgb(238, 148, 183);;
-            }
-            
-            input:focus {
-                width: 19em;
-            }
-
-            .fa-search {
-                font-size: .8em;
-                color: $corporateColor;
-                margin-right: 2em;
-            }
-
             .sign{
                 a {
                     background-color: $corporateColor;

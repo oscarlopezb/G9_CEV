@@ -1,16 +1,26 @@
 window.addEventListener('load', () => {
     renderSlider();
     mySlider();
+    
     renderSubmenu();
+
     renderGallery();
+    renderGalleryMenu();
+
+    initIsotope();
+
+    galleryMenuEvents();
+    galleryFilterEvents();
 });
+
+let iso = null;
 
 const renderSlider = () => {
     const renderSlider = document.querySelector('.swiper-wrapper');
     let htmlString = "";
-    for (let i = 0; i < home.slider.length; i++) {
+    for (let i = 0; i < data.slider.length; i++) {
         const sliderHTMLString = `
-        <div class="swiper-slide"><img src="${home.slider[i].img}"></div>
+        <div class="swiper-slide"><img src="${data.slider[i].img}"></div>
         `;
         htmlString += sliderHTMLString;
     }
@@ -105,43 +115,48 @@ const renderSubmenu = () => {
     });
 };
 
+const createCategories = (categories) => {
+    // console.log(categories);
+    return categories.join(" ");
+};
+
 const renderGallery = () => {
     const galleryHolder = document.querySelector('.gallery_items');
     let htmlString = "";
-    for (let i = 0; i < home.gallery.length; i++) {
+    for (let i = 0; i < data.gallery.length; i++) {
         const galleryHTMLString = `
-                <article class="gallery_item">
+                <article class="gallery_item ${createCategories(data.gallery[i].categories)}">
                     <div class="bg">
                         <div class="gradient"></div>
-                        <img class="img_project" src="${home.gallery[i].img}"
+                        <img class="img_project" src="${data.gallery[i].img}"
                             alt="" width="20%">
                         <div class="content">
                             <div class="author">
+                                <a href="#">
                                 <div class="pic">
-                                    <img class="img_author" src="${home.gallery[i].author.img}"
+                                    <img class="img_author" src="${data.gallery[i].author.img}"
                                         alt="">
                                 </div>
-                                <a href="#"><div class="name">${home.gallery[i].author.name}</div></a>
+                                </a>
+                                <a href="#"><div class="name">${data.gallery[i].author.name}</div></a>
                                 <div class="type">
-                                    <a href="#" class="pro">PRO</a>
-                                    <a href="#" class="team">TEAM</a>
+                                    <a href="#" class="pro ${data.gallery[i].author.pro ? "" : "type_none"}">PRO</a>
+                                    <a href="#" class="team ${data.gallery[i].author.team ? "" : "type_none"}">TEAM</a>
                                 </div>
                             </div>
                             <div class="meta">
                                 <div class="likes">
-                                    <div class="fa fa-heart"></div>
-                                    <p>10</p>
+                                    <a href="#"><div class="fa fa-heart"></div></a>
+                                    <p>${data.gallery[i].likes}</p>
                                 </div>
                                 <div class="views">
                                     <div class="fa fa-eye"></div>
-                                    <p>143</p>
+                                    <p>${data.gallery[i].views}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="gallery_hover">
-                            <div class="hover_title">
-                                Doku - Digital Wallet App
-                            </div>
+                            <div class="hover_title">${data.gallery[i].hover_title}</div>
                             <div class="icons">
                                 <a href="#"><div class="fa fa-folder"></div></a>
                                 <a href="#"><div class="fa fa-heart"></div></a>
@@ -154,3 +169,104 @@ const renderGallery = () => {
     }
     galleryHolder.innerHTML = htmlString;
 };
+
+const initIsotope = () => {
+    const elem = document.querySelector('.gallery_items');
+    iso = new Isotope(elem, {
+            percentPosition: true,
+            layoutMode: 'masonry'
+    });
+};
+
+const getSingleCategories = () => {
+    const categories = data.gallery.map(galleryItem => galleryItem.categories);
+    const uniqueCategories = [];
+
+    categories.forEach(categoryArr => {
+        categoryArr.forEach(category => {
+            if (!uniqueCategories.includes(category)) {
+                uniqueCategories.push(category);
+            }
+        });
+    });
+
+    uniqueCategories.sort();
+    return uniqueCategories;
+};
+
+const renderGalleryMenu = () => {
+    const filters = document.querySelector('.filters');
+    let htmlString = "";
+    const categories = getSingleCategories();
+    categories.unshift("All")
+
+    categories.forEach(category => {
+        htmlString += `
+            <a class="filter_left_button ${category == "All" ? "actual" : ""}" data-category="${category}">${category}</a>
+        `;
+    });
+
+    filters.innerHTML = htmlString;
+};
+
+const galleryMenuEvents = () => {
+    const filters = document.querySelectorAll(".filters .filter_left_button");
+    // const galleryItems = document.querySelectorAll(".gallery_item");
+
+    filters.forEach(filter => {
+        filter.addEventListener("click", () => {
+
+            const category = filter.dataset.category;
+
+            // console.log(category);
+            // galleryItems.forEach(galleryItem => {
+            //     if (galleryItem.classList.contains(category)) {
+            //         galleryItem.classList.remove("hidden");
+            //     } else {
+            //         galleryItem.classList.add("hidden");
+            //     }
+            // });
+
+
+
+            // if (category == "All") {
+            //     galleryItems.forEach(galleryItem => {
+            //         galleryItem.classList.remove("hidden");
+            //     });
+            // };
+
+            if (category == "All") {
+                iso.arrange({ filter: "*"})
+            } else {
+                iso.arrange({ filter: "." + category })
+            }
+
+            filters.forEach(filter_ => {
+                filter_.classList.remove("actual");
+            });
+            filter.classList.add("actual")
+        });
+    });
+};
+
+const galleryFilterEvents = () => {
+    const input = document.querySelector(".input input");
+    const galleryItems = document.querySelectorAll(".gallery_item");
+
+    input.addEventListener("keyup", () => {
+        // console.log(input.value);
+        const value = input.value;
+
+        galleryItems.forEach(galleryItem => {
+            const title = galleryItem.querySelector(".hover_title");
+
+            if (title.innerHTML.includes(value)) {
+                galleryItem.classList.remove("hidden");
+            } else {
+                galleryItem.classList.add("hidden");
+            }
+        });
+    });
+}; 
+
+// se me filtra ok, pero no sé como hacer que no haga distinción entre mayúsculas y minúsculas //

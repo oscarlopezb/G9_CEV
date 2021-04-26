@@ -39,7 +39,7 @@
                 <nav class="header_navi">
                     <ul class="header_navigation_items">
                         <li class="header_navigation_item">
-                            <a href="#" class="click1">Inspiration</a>
+                            <a href="#" class="menuitem click1">Inspiration</a>
                             <div class="inspiration_menu">
                                 <nav class="submenu_inspiration">
                                     <ul>
@@ -205,7 +205,7 @@
                             </div>
                         </li>
                         <li class="header_navigation_item">
-                            <a href="#" class="click2">Find Work</a>
+                            <a href="#" class="menuitem click2">Find Work</a>
                             <nav class="findwork_menu">
                                 <ul>
                                     <li class="submenu_item">
@@ -274,13 +274,13 @@
                             </nav>
                         </li>
                         <li class="header_navigation_item">
-                            <a href="#" class="click4">Learn Design</a>
+                            <a href="#" class="menuitem">Learn Design</a>
                         </li>
                         <li class="header_navigation_item">
-                            <a href="#" class="click5">Go Pro</a>
+                            <a href="#" class="menuitem">Go Pro</a>
                         </li>
                         <li class="header_navigation_item">
-                            <a href="#" class="click3">Hire Designers</a>
+                            <a href="#" class="menuitem click3">Hire Designers</a>
                             <nav class="hire_menu">
                                 <ul>
                                     <li class="submenu_item">
@@ -394,11 +394,6 @@
             </div>
 
             <div class="header_right">
-                <div id="input" class="input">
-                    <input type="text" placeholder="SEARCH">
-                </div>
-                <i class="fa fa-search"></i>
-
                 <div class="sign">
                     <a href="#" class="sign">Sign in</a>
                 </div>
@@ -454,27 +449,19 @@
         <div class="holder">
 
             <div class="filter">
-                <div class="filter_left">
-                    <a href="#" class="filter_left_button actual">All</a>
-                    <a href="#" class="filter_left_button">Animation</a>
-                    <a href="#" class="filter_left_button">Branding</a>
-                    <a href="#" class="filter_left_button">Illustration</a>
-                    <a href="#" class="filter_left_button">Mobile</a>
-                    <a href="#" class="filter_left_button">Print</a>
-                    <a href="#" class="filter_left_button">Product Design </a>
-                    <a href="#" class="filter_left_button">Typography</a>
-                    <a href="#" class="filter_left_button">Web Design</a>
+                <div class="filter_left filters">
+                    <!-- <a class="filter_left_button" data-category="cat_01">Animation</a> -->
                 </div>
 
                 <div class="filter_right">
                     <a class="filter_right_text">
-                        <p>Popular</p>
-                        <i class="fa fa-angle-down"></i>
-                    </a>
-                    <a class="filter_right_text">
                         <p>Filters</p>
                         <i class="fa fa-filter"></i>
                     </a>
+                    <div id="input" class="input">
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <i class="fa fa-search"></i>
                 </div>
             </div>
 
@@ -643,6 +630,7 @@
     </footer>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script src="./app/data.js"></script>
     <script src="./app/main.js"></script>
 
