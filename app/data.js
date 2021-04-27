@@ -2,15 +2,17 @@ const data = {
     slider: [
         {
             img: "https://cdn.dribbble.com/users/2742725/screenshots/15539570/media/a392ce5f5e8401b04905c2c531f6a1fa.png",
+            name: "Nebe Studio",
+        },
+        {
+            img: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/fbbb03117020007.606dc5bfc5a42.jpg",
+            name: "Lea Tomicic",
         },
         {
             img: "https://cdn.dribbble.com/users/4835348/screenshots/15540007/media/77d3669984b93e00dd20b4903e2b4531.png",
-        },
-        {
-            img: "https://cdn.dribbble.com/users/26642/screenshots/15538892/media/7b40e63f290a35390b25473fa498b7ba.png",
+            name: "Marcus Pitty",
         },
     ],
-
     gallery: [
         {
             img: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/9a4264108715701.5fc4483a97028.gif",
@@ -41,7 +43,7 @@ const data = {
             hover_title: "Doku - Digital Wallet App",
         },
         {
-            img: "https://cdn.dribbble.com/users/648922/screenshots/15539468/media/32e0f8c4bd35d4408e4007f8dbc7b603.png",
+            img: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/89061383405907.5d3b0e196c252.jpg",
             author: {
                 img:
                     "https://cdn.dribbble.com/users/648922/avatars/normal/88a9418e66397a21425c20347c4b75df.png?1610604686",
@@ -98,24 +100,6 @@ const data = {
             likes: "10",
             views: "6,8k",
             hover_title: "Food Ordering Mobile",
-        },
-        {
-            img: "https://cdn.dribbble.com/users/941250/screenshots/15540170/media/8c46ff0e6a2693ba29bababdb40d4c70.png?compress=1&resize=1600x1200",
-            author: {
-                img:
-                    "https://cdn.dribbble.com/users/941250/avatars/normal/19cab3e145b76b901c40c373eab045bd.png?1536487269",
-                name: "Patrick H",
-                pro: false,
-                team: false,
-            },
-
-            categories: [
-                "Product",
-            ],
-
-            likes: "50",
-            views: "150k",
-            hover_title: "Youtube Plugin",
         },
         {
             img: "https://cdn.dribbble.com/users/1666561/screenshots/15535391/media/2d91e70d962cd1a966f578c239ebf0fe.jpg?compress=1&resize=1600x1200",

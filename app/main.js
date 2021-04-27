@@ -11,6 +11,8 @@ window.addEventListener('load', () => {
 
     galleryMenuEvents();
     galleryFilterEvents();
+
+    initTippy();
 });
 
 let iso = null;
@@ -20,7 +22,12 @@ const renderSlider = () => {
     let htmlString = "";
     for (let i = 0; i < data.slider.length; i++) {
         const sliderHTMLString = `
-        <div class="swiper-slide"><img src="${data.slider[i].img}"></div>
+            <div class="swiper-slide">
+                <img src="${data.slider[i].img}">
+                <div class="slider_name">
+                    <p>Project by <span>${data.slider[i].name}</span></p>
+                </div>
+            </div>
         `;
         htmlString += sliderHTMLString;
     }
@@ -239,7 +246,7 @@ const galleryMenuEvents = () => {
                 iso.arrange({ filter: "*"})
             } else {
                 iso.arrange({ filter: "." + category })
-            }
+            };
 
             filters.forEach(filter_ => {
                 filter_.classList.remove("actual");
@@ -267,6 +274,16 @@ const galleryFilterEvents = () => {
             }
         });
     });
-}; 
+};
 
-// se me filtra ok, pero no sé como hacer que no haga distinción entre mayúsculas y minúsculas //
+const initTippy = () => {
+    tippy('.hasToolTip', {
+        content: 'Come & enjoy!'
+    }); 
+};
+
+
+
+// el filtrador por texto va ok, pero no sé como hacer que no haga distinción entre mayúsculas y minúsculas //
+// el isotope no me afecta al filtrador//
+// las categorías con dos palabras no generan items//

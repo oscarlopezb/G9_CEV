@@ -3898,15 +3898,36 @@ header .holder .header_right .sign a:hover {
 
 .slider .holder .swiper-container .swiper-slide {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .slider .holder .swiper-container .swiper-slide img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  position: relative;
+}
+
+.slider .holder .swiper-container .swiper-slide .slider_name {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 400px;
+  top: 30px;
+}
+
+.slider .holder .swiper-container .swiper-slide p {
+  background-color: rgba(25, 25, 71, 0.781);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  font-size: .8em;
+  padding: 16px 32px;
+  color: white;
+  border-radius: .5em 0 0 .5em;
+}
+
+.slider .holder .swiper-container .swiper-slide p span {
+  font-size: 1em;
+  font-weight: bold;
 }
 
 .slider .holder .swiper-container .swiper-pagination-bullet {

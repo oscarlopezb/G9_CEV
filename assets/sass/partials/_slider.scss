@@ -57,11 +57,33 @@ $base: 8px;
 
             .swiper-slide{
                 width: 100%;
-                display: flex;
 
                 img {
                     width: 100%;
                     object-fit: cover;
+                    position: relative;
+                }
+
+                .slider_name {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    left: 400px;
+                    top: 30px;
+                }
+
+                p {
+                    background-color: rgba(25, 25, 71, 0.781);
+                    backdrop-filter: blur(3px);
+                    font-size: .8em;
+                    padding: $base * 2 $base * 4;
+                    color: white;
+                    border-radius: .5em 0 0 .5em;
+
+                    span {
+                        font-size: 1em;
+                        font-weight: bold;
+                    }
                 }
             }
 
