@@ -1,5 +1,15 @@
-$corporateColor: rgb(233, 76, 137);
+$corporateColor: #fcc630;
+$arte: #db3155;
+$musica: #26ae8d;
 $base: 8px;
+
+* {
+    color:rgb(70, 68, 78);
+} 
+
+p {
+    hyphens: auto;
+}
 
 main {
     width: 100%;
@@ -7,298 +17,476 @@ main {
     justify-content: center;
     align-items: center;
     display: flex;
-    margin: 2em 0;
+
+    hr {
+        color: white ;
+    }
 
     .holder {
-        .filter {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 2em;
-
-            .filter_left {
-                .filter_left_button {
-                    margin-right: 2em;
-                    color:rgb(70, 68, 78);
-                    font-size: .8em;
-                    width: 200px;
-                    padding: $base;
-                    cursor: pointer;
-                }
-
-                .actual {
-                    background-color: $corporateColor;
-                    color: white;
-                    padding: $base;
-                    border-radius: .5em;
-                    width: 100%;
-                }
+        .todo {
+            .fondotitulos {
+                background-color: $corporateColor;
+                width: 35%;
+                height: 4em;
+                margin-left: -14em;
+                border-radius: 2em;
+                margin-top: 1em;
             }
 
-            .filter_right{
+            .titulos {
+                margin-top: -1.35em;
+                font-size: 2em;
+                color: rgb(70, 68, 78);
+                margin-bottom: 2em;
+            }
+        }
+
+        hr {
+            border: none;
+            margin-bottom: 7em;
+        }
+
+        .descripcion {
+            margin-top: 3em;
+    
+            .descripcion_item {
                 display: flex;
-                align-items: center;
+    
+                .img {
+                    img {
+                        width: 100%;
+                        height: 95%;
+                        object-fit: cover;
+                        border-radius: .5rem;
+                    }
+                }
+    
+                .descripcion_text {
+                    text-align: justify;
+                    width: 120%;
+                    margin-left: 3rem;
+    
+                    div {
+                        margin-bottom: 2rem;
+    
+                        h3 {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
 
-                input { 
-                    display: flex;
-                    text-align: left;
-                    padding: $base $base * 2;
-                    width: 10em;
-                    border: solid 1px $corporateColor;
-                    border-radius: .5em;
-                    transition: 1s;
-                    margin-right: 1em;
+        .valores {
+            .valores_item {
+                display: flex;
+                text-align: justify;
+                margin-top: 2em;
+                padding-top: 4rem;
+    
+                .texto {
+                    width: 50%;
+                    margin-right: 4rem;
                 }
-                
-                input::placeholder {
-                    font-size: .9em;
-                    color: $corporateColor;
+    
+                img {
+                    margin-top: -2rem;
+                    margin-left: 3rem;
                 }
-                
-                input:focus {
-                    width: 15em;
-                }
+            }
+        }
 
-                .fa-search {
-                    font-size: 1em;
-                    color: $corporateColor;
-                }
+        .sistema {
+            
+            .forma {
+                text-align: justify;
+                .forma_item {
+                    
+                    .forma_uno {
+                        display: flex;
 
-                .filter_right_text{
+                        .forma_gif {
+                            margin: 0 3rem 3rem 0;
+                            border: solid 1px grey;
+                        }
+
+                        div {
+                            margin-top: 7rem;
+                        }
+                    }
+                    
+                    .forma_dos {
+                        display: flex;
+
+                        .forma_tres {
+                            text-align: justify;
+                            margin-right: 3rem;
+                            width: 190%;
+    
+                            .cuadrado {
+                                background-color: $arte;
+                                color: white;
+                                padding: .2rem .5rem;
+                            }
+    
+                            .triangulo {
+                                background-color: $musica;
+                                color: white;
+                                padding: .2rem .5rem;
+                            }
+    
+                            .circulo {
+                                background-color: $corporateColor;
+                                color: white;
+                                padding: .2rem .5rem;
+                            }
+                        }
+
+                        div {
+
+                            .patron {
+                                background-color: rgb(65, 65, 65);
+                                color: white;
+                                padding: .2rem .5rem;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        
+            .retipo {
+                display: flex;
+            }
+            
+            .reticula {
+                margin: 6em 0;
+        
+                .reticula_item {
                     display: flex;
                     align-items: center;
-                    color: $corporateColor;
-                    font-size: .9em;
-                    border: solid 1px $corporateColor;
-                    margin: 0 $base * 2;
-                    border-radius: .5em;
-                    padding: $base $base * 2;
-                    transition: .4s 50ms ease-in-out;
-                    cursor: pointer;
+        
+                    .reticulaimg {
+                        border: solid 1px grey;
+                        margin-right: 3em;
+                    }
+        
+                    .reticulatexto {
+                        p {
+                            width: 80%;
+                            margin-left: 6.5em;
+                            text-align: justify;
+                        }
+                    }
+                }         
+            }
 
-                    p {
-                        margin-right: .5em;
+            .tipo {
+                margin-bottom: 5rem;
+                .tipo_item {
+                    display: flex;
+                    align-items: center;
+                   
+
+                    img {
+                        margin-right: 1rem;
+                    }
+
+                    div {
+                        align-items: center;
+
+                
+
+                        p {
+                            width: 100%;
+                            text-align: justify;
+                            
+                        }
+                    }
+
+                    .gotham {
+
+                        margin-right: -2em;
+                        margin-left: 2em;
+                  
+                      
+                        
+                           
                     }
                 }
-                
-                .filter_right_text:hover, a:hover{
-                    background-color: $corporateColor;
-                    transition: .4s 50ms ease-in-out;
-                    color: white !important;
+            }
+
+            .color {
+            
+               
+                .color_item {
+                    display: flex;
+                   
+
+                    img {
+                        width: 20%;
+                        margin-right: 3em;
+                     }
+
+                     .color1 {
+
+                        text-align: justify;
+                       margin-right: 3em;
+                       width: 140%;
+                       
+                       .circulo {
+                        background-color: $corporateColor;
+                        color: white;
+                        padding: .2rem .5rem;
+                       }
+
+                     }
+
+                     .color2 {
+
+                        text-align: justify;
+                       margin-right: 3em;
+                       width: 100%;
+
+                     }
+
+                     
                 }
-            } 
+
+                .colorsito {
+                   width: 40%;
+                    margin-top: -3em;
+                    margin-left: 19em;
+
+                    img {
+                        width: 95%;
+                   
+                    }
+
+                }
+
+                .paleta {
+                    margin-left:53em;
+                    margin-top: -11em;
+
+                    img {
+                        width: 95%;
+                   
+                    }
+                }
+
+               
+
+            }
+
+           
+            
         }
 
-        .gallery_items {
-            // display: grid;
-            // grid-template-columns: 1fr 1fr 1fr;
-            // grid-gap: $base * 3;
-        
-            .gallery_item {
-                width: 33%;
-                padding: $base * 2;
-
-                &.hidden {
-                    display: none;
-                }
-        
-                .bg {
-                    position: relative;
-                    border-radius: 1em;
-                    color: white;
-        
-                    .gradient {
-                        background: linear-gradient(0deg, rgb(39, 39, 39) 0%, rgba(0,0,0,0.20351890756302526) 22%, rgba(255,255,255,0) 100%);
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        top: 0;
-                        border-radius: 1em;
-                    }
-        
-                    img{
-                        width: 100%;
-                        border-radius: 1em;      
-                    }
-        
-                    .content {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        padding: 1em;
-            
-                        .author {
-                            display: flex;
-                            align-items: center;
-
-                            a {
-                                color: white;
-                            }
-            
-                            .pic {
-                                margin-right: $base;
-                                width: 30px;
-                                height: 30px;
-                                border-radius: 1em;
-                                overflow: hidden;
+        .resultados {
                 
-                                img {
-                                    width: 100%;
-                                    height: 100%;
-                                    object-fit: cover;
-                                    object-position: center;
-                                }
+
+            .resultados_item {
+
+
+                .intro {
+                    width: 66%;
+                    text-align: justify;
+                    hyphens: auto;
+                    margin-bottom: 2em;
+                }
+               
+
+                .carteles {
+                   
+                    
+
+
+                    .arte {
+                        display: flex;
+                        margin-bottom: 3em;
+
+                        p {
+                        
+                            text-align: justify;
+
+                            .cont {
+                                background-color: #cb6178;
+                                color: white;
+                                padding: .2rem .5rem;
+                            }
+
+                            
+                            .clasico {
+                                background-color: #601735;
+                                color: white;
+                                padding: .2rem .5rem;
+                            }
+
+                            
+                            
+                        }
+
+                        img {
+                            margin-right: 2em;
+
+                        }
+                        
+
+                    }
+
+                    .musica {
+                        display: flex;
+                        margin-bottom: 3em;
+
+                        p {
+                        
+                            text-align: right;
+                            text-align: justify;
+                            width: 80%;
+
+                            .voz {
+                                background-color: #1f493d;
+                                color: white;
+                                padding: .2rem .5rem;
+                            }
+
+                            .no_voz {
+                                background-color: #54bba0;
+                                color: white;
+                                padding: .2rem .5rem;
                             }
                             
-                            .name {
-                                margin-right: 1em;
-                                font-size: .9em;
-                            }
-        
-                            .type{
-                                display: flex;
-        
-                                a {
-                                    margin-right: 1em;
-                                    color: rgb(32, 34, 46);
-                                    background-color: rgb(193, 202, 226);
-                                    border-radius: .5em;
-                                    font-size: .6em;
-                                    padding: 0 $base;
-                                }
-
-                                a:hover {
-                                    background-color: $corporateColor;
-                                    transition: .2s 10ms ease-in-out;
-                                    color: white;
-                                }
-
-                                .type_none {
-                                    display: none;
-                                }
-                            }
                         }
-            
-                        .meta {
-                            display: flex;
-                            align-items: center;
-        
-                            p {
-                                margin: 0;
-                            }
-            
-                            .fa {
-                                margin-right: .5em;
-                            }
-        
-                            .likes {
-                                display: flex;
-                                align-items: center;
-                                margin-right: 1em;
-                                font-size: .8em;
 
-                                a {
-                                    color: white;
-                                }
-                            }
+                        img {
+                            margin-left: 2em;
 
-                            .fa-heart:hover {
-                                color: $corporateColor;
-                                transition: .2s 10ms ease-in-out;
-                            }
-        
-                            .views {
-                                display: flex;
-                                align-items: center;
-                                font-size: .8em;
-                            }
                         }
+                        
+
                     }
 
-                    .gallery_hover {
-                        background: linear-gradient(180deg, rgb(61, 5, 26) 0%, rgba(255,255,255,0) 100%);
-                        position: absolute;
-                        bottom: 80px;
-                        left: 0;
-                        right: 0;
-                        top: 0;
+                } 
+                 
+                .redes {
+
+                    margin-top: 8em;
+
+                    .redes_texto {
                         display: flex;
-                        border-radius: 1em;
-                        justify-content: space-between;
-                        padding: $base * 3;
-                        opacity: 0;
-                        visibility: hidden;
-                        transition: .5s 10ms ease-in-out;
-    
-                        .hover_title {
-                            margin-top: .2em;
-                            font-weight: bold;
-                            font-size: .9em;
+
+                        p {
+                            margin-right: 3em;
+                            text-align: justify;
                         }
-    
-                        .icons a{
-                            background-color: white;
-                            color: $corporateColor;
-                            padding: $base;
-                            margin-left: 1em;
-                            border-radius: .5em;
-                        }
-    
-                        a:hover {
-                            color: rgb(151, 43, 84);
-                            transition: .2s 10ms ease-in-out;
+
+                        .videos {
+                           margin-top: -3em;
                         }
                     }
+                
+
+
+
                 }
 
-                .bg:hover > .gallery_hover {
-                    opacity: 1;
-                    visibility: visible;
-                    transition: .5s 10ms ease-in-out;
+                .post {
+                    margin-top: 9em;
+
+                    h2 {
+                        margin-left: 25.3em;
+                    }
+
+                    .post_texto {
+                        display: flex;
+                        align-items: center;
+
+                        p {
+                            margin-left: 3em;
+                            text-align: justify;
+                        }
+
+                      
+                    }
+
                 }
 
+                .pastillas {
+                    margin-top: 9em;
+                    
 
+                    h2 {
+                        margin-bottom: -3.5em;
+                    }
+
+                    .pastillas_texto {
+                        display: flex;
+                        align-items: center;
+                      
+                       
+
+                        p {
+                            margin-right: 3em;
+                            text-align: justify;
+                        }
+
+                        .videos {
+                         
+                           
+                        }
+                    }
+
+                }
+
+                .largo {
+                    margin-top: 6em;
+
+                    h2 {
+                        margin-left: 25.3em;
+                    }
+
+                    .largo_texto {
+                        display: flex;
+                        align-items: center;
+
+                        p {
+                            margin-left: 3em;
+                            text-align: justify;
+                        }
+
+                        .video {
+
+                        }
+
+                      
+                    }
+
+                }
+
+                .final {
+                    margin-top: 10em;
+                    margin-bottom: 9em;
+
+                    h2 {
+                        margin-bottom: -3.5em;
+                    }
+
+                    .final_texto {
+                        display: flex;
+                        align-items: center;
+
+                        p {
+                            margin-right: 3em;
+                            text-align: justify;
+                        }
+                    }
+
+                }
             }
         }
-        
-        .gallery_sign {
-            display: flex;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-            margin: 3em 0 2em 0;
-        
-            .sign{
-                background-color: $corporateColor;
-                color: white;
-                padding: $base $base * 2;
-                font-weight: bold;
-                border-radius: .5em;
-                font-size: .9em;
-                margin: 0 $base * 4;
-                width: 200px;
-                text-align: center;
-            }
-        
-            .sign:hover {
-                background-color: rgb(212, 50, 112);
-                transition: .2s 10ms ease-in-out;
-            }
-        
-            .sign_in {
-                color: $corporateColor;
-                width: 100px;
-                text-align: center;
-            }
-        
-            .sign_in:hover {
-                color: rgb(212, 50, 112);
-            }
-        }
+
     }
+
+    
 }

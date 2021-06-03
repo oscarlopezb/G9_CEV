@@ -1,4 +1,4 @@
-$corporateColor: rgb(233, 76, 137);
+$corporateColor: #fcc630;
 $base: 8px;
 
 .slider{
@@ -7,52 +7,18 @@ $base: 8px;
     justify-content: center;
     align-items: center;
     display: flex;
+    margin-top: 6em;
 
     .holder {
         display: flex;
         align-items: center;
+        margin: 1em 0;
 
-        .slider_left {
-            width: 90%;
-
-            h1{
-                font-size: 3em;
-                line-height: 1em;
-                color: $corporateColor;
-                margin-bottom: .4em;
-            }
-
-            h2{
-                width: 90%;
-                font-size: 1em;
-                font-weight: normal;
-                color: rgb(39, 39, 58);
-                margin-bottom: 1.5em;
-            }
-
-            .sign{
-
-                a {
-                    background-color: $corporateColor;
-                    color: white;
-                    padding: $base $base * 2;
-                    font-weight: bold;
-                    border-radius: .5em;
-                    font-size: .9em;
-                }
-
-                a:hover {
-                    background-color: rgb(212, 50, 112);
-                    transition: .2s 10ms ease-in-out;
-                }
-            }
-        }     
-        
         .swiper-container {
-            width: 80%;
+            width: 160%;
             max-width: 1300px;
-            height: 400px;
-            margin: 2em 0;
+            height: 600px;
+            margin: 2em 4em 2em 0;
             border-radius: 1em;
 
             .swiper-slide{
@@ -61,29 +27,8 @@ $base: 8px;
                 img {
                     width: 100%;
                     object-fit: cover;
+                    height: 100%;
                     position: relative;
-                }
-
-                .slider_name {
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    left: 400px;
-                    top: 30px;
-                }
-
-                p {
-                    background-color: rgba(25, 25, 71, 0.781);
-                    backdrop-filter: blur(3px);
-                    font-size: .8em;
-                    padding: $base * 2 $base * 4;
-                    color: white;
-                    border-radius: .5em 0 0 .5em;
-
-                    span {
-                        font-size: 1em;
-                        font-weight: bold;
-                    }
                 }
             }
 
@@ -109,6 +54,41 @@ $base: 8px;
 
             .swiper-scrollbar {
                 display: none;
+            }
+        }
+
+        .slider_right {
+            width: 90%;
+
+            h1{
+                font-size: 3em;
+                line-height: 1em;
+                color: $corporateColor;
+                margin-bottom: .4em;
+
+                span {
+                    color: rgb(58, 58, 75);
+                    font-size: 1em;
+                    font-weight: normal;
+                }
+            }
+
+            h2{
+                font-size: 1em;
+                font-weight: normal;
+                color: rgb(58, 58, 75);
+                margin-bottom: 3em;
+                margin-top: -.6em;
+            }
+
+            .division_slider {
+                margin: -1em 0 2em 0;
+                width: 85%;
+            }
+
+            p {
+                font-size: .8em;
+                color: rgb(58, 58, 75);
             }
         }
     }

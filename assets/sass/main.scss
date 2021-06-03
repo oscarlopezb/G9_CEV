@@ -10,17 +10,15 @@
 @import 'partials/footer';
 
 
-$corporateColor: rgb(233, 76, 137);
+$corporateColor: #fcc630;
 
-// * { border: 1px solid $corporateColor; }
+//* { border: 1px solid $corporateColor; }
 
 html,
 body {
     font-size: $base * 2;
     font-family: 'Inter', sans-serif;
     line-height: $base * 3;
-    color: $body_color;
-    min-height: 100vh;
 }
 
 p {
@@ -30,8 +28,4 @@ p {
 .holder {
     width: 100%;
     max-width: 1300px;
-}
-
-hr {
-    width: 90%;
 }
